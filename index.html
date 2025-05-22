@@ -19,6 +19,23 @@
     <meta name="twitter:title" content="Bronx Appliance Repair - Same Day Service">
     <meta name="twitter:description" content="Bronx Appliance Repair Specializing in Washer & Dryer, Oven, Dishwasher, Cooktop, Refrigerator & Microwave Repair.">
     <meta name="twitter:image" content="https://appliancerepairservicesnyc.github.io/bronx-appliance-repair-service/assets/img/social.jpg">
+    <link rel="icon" type="image/x-icon" href="https://appliancerepairservicesnyc.github.io/bronx-appliance-repair-service/favicon.ico">
+    <meta name="google-site-verification" content="vS4VPKtfblnGrVe6JvSjiUbMnRV1Mi9-HpWASzhFQFs" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            try {
+                emailjs.init({
+                    publicKey: "zfCrLmZU8eK9CuZcs" // Your EmailJS Public Key
+                });
+                console.log("EmailJS initialized successfully");
+            } catch (error) {
+                console.error("Failed to initialize EmailJS:", error);
+            }
+        })();
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,12 +54,16 @@
         "addressRegion": "NY",
         "postalCode": "10461",
         "addressCountry": "US"
-},
-"areaServed": {
-  "@type": "GeoCoordinates",
-  "latitude": 40.8448,
-  "longitude": -73.8648
-},
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.8448,
+          "longitude": -73.8648
+        },
+        "geoRadius": "10000"  // Example radius in meters, adjust as needed (e.g., 10000 meters = 10 km)
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
